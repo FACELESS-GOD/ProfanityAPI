@@ -11,7 +11,7 @@ class  ProfanityResponse {
       }
       AddProfanity (Person)
       {
-          this.Response  += "Fuck you ,   " + Person.FirstName + " " + Person.LastName ; 
+          this.Response  += "Fuck you , " + Person.FirstName + " " + Person.LastName ; 
       }
 }
 
