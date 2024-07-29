@@ -1,0 +1,15 @@
+{
+  "name": "profanityapi",
+  "version": "1.0.1",
+  "description": "This API will add profanity to your requests and return them as response.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohit Ganorkar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
