@@ -1,10 +1,13 @@
 const Express = require('express');
 const Router = require('./Routes/Router.js');
+const AppLevelMiddleware = require('./Middleware/AppLevelMidddleware.js');
 const port = 3000;
 
 const App = Express();
 
 App.use(Express.json()); // Body - Parser
+
+App.use(AppLevelMiddleware);
 
 App.use(
     '/name',

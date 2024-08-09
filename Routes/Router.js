@@ -1,19 +1,6 @@
-class Person {    
-    constructor(FirstName, LastName) {
-      this.FirstName = FirstName;
-      this.LastName = LastName;
-    }
-  }
+const Person = require('.././CustomClasses/Person.js');
 
-class  ProfanityResponse {
-    constructor() {
-        this.Response = "";
-      }
-      AddProfanity (Person)
-      {
-          this.Response  += "Fuck you , " + Person.FirstName + " " + Person.LastName ; 
-      }
-}
+const ProfanityResponse = require('.././CustomClasses/ProfanityResponse.js');
 
 const express = require('express');
 
@@ -23,7 +10,7 @@ const Router = express.Router();
 Router.get(
     '/',
     (req,res)=>{
-        const NewPerson = new Person(req.body.FirstName, req.body.LastName); 
+        const NewPerson = new Person(req.body.FirstName, req.body.LastName, req.body.Profanity); 
         const Response = new ProfanityResponse();
         Response.AddProfanity(NewPerson);
         res.json(Response);
